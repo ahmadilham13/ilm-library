@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BukuAwak</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <div class="nav-bar">
+                <div>
+                    <h3 class="logo"><i class="fa-solid fa-book"></i> ILM STORE BOOK</h3>
+                </div>
+                <div class="humburger">
+                    <div class="toggle"></div>
+                    <div class="toggle"></div>
+                    <div class="toggle"></div>
+                </div>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tambahBuku">Tambah Buku</a></li>
+                <li><a href="#rakBuku">Rak Buku</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article id="home" class="home">
+            <div class="container">
+                <div class="row">
+                    <div class="w-50">
+                        <img src="assets/img/book2.gif" class="img-book" alt="animasi-book">
+                    </div>
+                    <div class="w-50 caption-book">
+                        <p class="text-justify">
+                            Selamat Datang Di ILM BOOK STORE dimana kami menyediakan fasilitas buku yang bisa kalian
+                            telusuri dan baca sesuai yang diinginkan mulai dari tentang pendidikan, agama, sains.
+                            sejarah, dll. Kalian bisa baca buku di sini secara GRATIS!!!,
+                            kalian juga bisa menambahkan, mencari, menghapus dengan disediakan rak buku yang belum
+                            dibaca dan sudah dibaca. Tetap rajin membaca ya karena rajin membaca adalah alat paling
+                            dasar untuk meraih hidup yang baik. Selamat Membaca :)
+                        </p>
+                        <a href="" class="button">Mulai Baca</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="tambahBuku" class="crudContainer">
+            <div class="container">
+                <div class="row">
+                    <div class="w-70">
+                        <h2 class="text-center">Input Data Buku Baru</h2>
+                        <div class="card">
+                            <form id="form">
+                                <label for="title">Judul</label>
+                                <input type="text" name="title" id="title" placeholder="Masukkan Judul Buku" required />
+                                <label for="author">Penulis</label>
+                                <input type="text" name="author" id="author" placeholder="Masukkan Penulis Buku"
+                                    required />
+                                <label for="tahun">Tahun Terbit</label>
+                                <input type="number" name="tahun" id="year" placeholder="Masukkan Tahun Terbit"
+                                    required />
+                                <label for="isCompleted">
+                                    <input type="checkbox" name="isCompleted" id="isCompleted" />
+                                    Selesai Dibaca
+                                </label>
+                                <button type="submit" class="button" onclick="submitData()">Simpan Buku</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="rakBuku">
+                <section class="row gap">
+                    <div class="w-70">
+                        <h2 class="text-center">Rak Buku ILM BOOK STORE</h2>
+                        <div class="card">
+                            <form id="formCariBuku">
+                                <label for="cariBukuTitle">Judul</label>
+                                <input type="search" name="cariBukuTitle" id="cariBukuTitle"
+                                    placeholder="Masukkan Judul Buku yang anda cari">
+                                <button type="submit" class="button">Cari Buku</button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="row">
+                        <div class="w-70">
+                            <div class="card">
+                                <h3 class="text-center">Belum Selesai Dibaca</h3>
+                                <div id="belumSelesai"></div>
+                            </div>
+                        </div>
+                        <div class="w-70">
+                            <div class="card">
+                                <h3 class="text-center">Selesai Dibaca</h3>
+                                <div id="selesaiDibaca"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div>
+            <p class="text-white text-center">
+                ILM BOOK STORE <span class="text-danger"><i class="fa-solid fa-heart"></i>2022, Ahmad Ilham,
+                    S.Kom</span>
+            </p>
+        </div>
+        <div class="sosmed-row">
+            <div class="text-white">
+                <a href="https://wa.me/6282281517310" class="icon-sosmed">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+            <div class="text-white">
+                <a href="https://www.instagram.com/ahmadilm_/" class="icon-sosmed text-dark">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="text-white">
+                <a href="https://www.tiktok.com/ahmadilham13" class="icon-sosmed">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+            <div class="text-white">
+                <a href="https://www.github.com/ahmadilham13" class="icon-sosmed">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/javascript.js"></script>
+    <script>
+        const submitData = () => {
+            Swal.fire({
+                icon: "success",
+                title: "Selamat",
+                text: "Buku Baru Berhasil Ditambahkan",
+            });
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "sans-serif"; 
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    line-height: 30px;
+}
+
+.home {
+    background: linear-gradient(90deg, lightblue 0%, rgb(12, 137, 179) 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.crudContainer {
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.logo:hover {
+    color: black;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background: blue;
+    align-items: center;
+    padding: 15px 50px;
+    width: 100%;
+}
+nav > ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+nav > ul > li {
+    list-style: none;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+nav > ul > li > a:hover {
+    color: black;
+    transition: .2s ease-in-out;
+}
+
+.humburger {
+    display: none;
+}
+
+.toggle {
+    margin: 4px 0;
+    height: 3px;
+    width: 25px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+  }
+
+.container {
+    padding: 80px 50px;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.img-book {
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 gray;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: whitesmoke;
+}
+.text-dark {
+    color: dark;
+}
+.text-danger {
+    color: red;
+}
+.w-50 {
+    flex-basis: 50%;
+}
+.w-70 {
+    flex-basis: 70%;
+}
+
+.card {
+    padding: 20px;
+    background: linear-gradient(90deg, lightblue 0%, rgb(12, 137, 179) 100%);
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 grey;
+}
+
+.caption-book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 45px;
+}
+
+.button {
+    padding: 3px 50px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: 1px solid blue;
+    box-shadow: 0 2px 4px 0 gray;
+    background-color: blue;
+    color: whitesmoke;
+}
+
+.button:hover {
+    transition: 0.5s;
+    background-color: #aeaeae;
+    color: black;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="search"] {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid blue;
+    padding: 2px 10px;
+}
+
+h2 {
+    padding: 20px;
+}
+
+.gap {
+    margin-bottom: 20px;
+}
+
+.sosmed-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.icon-sosmed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    box-shadow: 0 4px 8px 0 #222;
+    background-color: whitesmoke;
+    color: #000;
+    font-size: 20px;
+}
+
+.card-buku {
+    padding: 15px;
+    background-color: #efe7c8;
+    border-radius: 10px;
+    width: 100%;
+    margin: 10px 0;
+    box-shadow: 0 2px 4px 0 gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.button-hapus {
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 5px;
+    border: 1px solid #f80202;
+    box-shadow: 0 2px 4px 0 gray;
+    background-color: #d30000;
+    color: whitesmoke;
+    font-size: 20px;
+  }
+  
+  .button-hapus:hover {
+    transition: 0.5s;
+    background-color: #f80202;
+  }
+  
+  .button-baca {
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: 1px solid #00ff0a;
+    box-shadow: 0 2px 4px 0 gray;
+    background-color: #0dd414;
+    color: whitesmoke;
+    font-size: 20px;
+  }
+  
+  .button-baca:hover {
+    transition: 0.5s;
+    background-color: #00ff0a;
+  }
+  
+
+.icon-sosmed:hover {
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 4px 8px 0 white;
+    color: whitesmoke;
+    background-color: #000;
+}
+
+footer {
+    padding: 15px 50px;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  
+    nav > ul {
+      width: 100%;
+      background-color: whitesmoke;
+      border-radius: 10px;
+      padding: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      display: none;
+    }
+  
+    nav > ul > li {
+      padding: 10px 0;
+    }
+    
+  
+    nav > ul > li > a {
+      color: black;
+    }
+  
+    .humburger {
+      display: block;
+    }
+  
+    .show {
+      display: block;
+    }
+  
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .row {
+      flex-direction: column;
+      text-align: center;
+    }
+    .w-30,
+    .w-50,
+    .w-70 {
+      flex-basis: 100%;
+    }
+  
+    .home {
+      height: auto;
+    }
+  
+    footer {
+      flex-direction: column-reverse;
+    }
+  
+    .navBar,
+    footer {
+      padding: 15px 25px;
+    }
+  
+    .container {
+      padding: 80px 25px;
+    }
+  
+    .card-buku {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
